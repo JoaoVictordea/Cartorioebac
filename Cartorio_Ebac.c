@@ -59,6 +59,27 @@ int registro()
 		fclose(file);
 		
 		system("cls");
+		
+		int escolha;
+		
+		printf("###Você deseja registrar mais nomes ?###\n\ndigite 1 - para sim\n\ndigite 2 - para não\n\n:");
+		scanf("%d", &escolha);
+		
+		switch(escolha)
+		{
+			case 1:
+			printf("Você escolheu registrar mais nomes!\n\n");
+			system("pause");
+			system("cls");
+			break;
+			
+			default:
+			printf("Você escolheu voltar para o Menu Principal!\n\n");
+			system("pause");
+			system("cls");
+			return 0;
+			break;
+		}
 	}
 	
 }
@@ -97,6 +118,26 @@ int consulta()
 	system("pause");
 	system("cls");
 	
+		int escolha;
+		
+		printf("###Você deseja consultar mais nomes ?###\n\ndigite 1 - para sim\n\ndigite 2 - para não\n\n:");
+		scanf("%d", &escolha);
+		
+		switch(escolha)
+		{
+			case 1:
+			printf("Você escolheu consultar mais nomes!\n\n");
+			system("pause");
+			system("cls");
+			break;
+			
+			default:
+			printf("Você escolheu voltar para o Menu Principal!\n\n");
+			system("pause");
+			system("cls");
+			return 0;
+			break;
+		}
 	}
 }
 int deletar()
@@ -122,6 +163,27 @@ int deletar()
 		system("pause");
 		}
 	system("cls");
+	
+		int escolha;
+		
+		printf("###Você deseja deletar mais nomes?###\n\ndigite 1 - para sim\n\ndigite 2 - para não\n\n:");
+		scanf("%d", &escolha);
+		
+		switch(escolha)
+		{
+			case 1:
+			printf("Você escolheu deletar mais nomes!\n\n");
+			system("pause");
+			system("cls");
+			break;
+			
+			default:
+			printf("Você escolheu voltar para o Menu Principal!\n\n");
+			system("pause");
+			system("cls");
+			return 0;
+			break;
+		}
 	}
 }
 int main()
@@ -141,6 +203,7 @@ int main()
 		printf("\t1 - Criar registros\n");
 		printf("\t2 - Consultar registros\n");
 		printf("\t3 - Deletar registros\n");
+		printf("\t4 - sair\n\n");
 	
 		printf("Opção: "); //Fim do menu
 
@@ -160,6 +223,11 @@ int main()
 			
 			case 3:
 			deletar();
+			break;
+			
+			case 4:
+			printf("Obrigado por utilizar o sistema!\n\n");
+			return 0;
 			break;
 			
 			default:
